@@ -1,0 +1,33 @@
+{
+  "name": "syringe",
+  "version": "0.0.1",
+  "description": "Simple dependency injection for functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Clubjudge/syringe.git"
+  },
+  "keywords": [
+    "function",
+    "injection",
+    "dependency"
+  ],
+  "author": "ClubJudge",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/Clubjudge/syringe/issues"
+  },
+  "homepage": "https://github.com/Clubjudge/syringe",
+  "devDependencies": {
+    "grunt-jasmine-node-coverage": "~0.1.7",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1"
+  }
+}
