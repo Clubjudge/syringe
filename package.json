@@ -1,5 +1,5 @@
 {
-  "name": "syringe",
+  "name": "syringe-js",
   "version": "0.0.1",
   "description": "Simple dependency injection for functions",
   "main": "index.js",
