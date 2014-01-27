@@ -13,7 +13,7 @@ The module then takes one or more parameters, a function to inject and any numbe
 In this example ```myFunc``` expects two parameters, ```arg1``` and ```arg2```. The Syringe function receives other parameters, but ```myFunc``` will only have access to the ones it asked for.
 
 ```javascript
-var inject = require('syringe');
+var inject = require('syringe-js');
 
 var myFunc = function(arg1, arg2) {
   //...
