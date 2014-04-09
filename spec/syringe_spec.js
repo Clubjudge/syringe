@@ -57,6 +57,20 @@ describe('Syringe', function() {
     });
   });
 
+  describe('Execution context', function() {
+    it('uses the last parameter as a context for the injected function', function(done) {
+      this.something = 'something';
+
+      var fn = function (foo, bar) {
+        expect(this.something).toEqual('something');
+        done();
+      };
+
+      var injected = inject(fn, {foo: 'fooValue', bar: 'barValue'}, this);
+      injected();
+    });
+  });
+
   describe('Syntax differences', function() {
     it('works for "function (arg1, arg2) {}"', function() {
       var fn = function (foo, bar) {
