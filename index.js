@@ -29,10 +29,12 @@
   };
 
   module.exports = function(fn) {
-    var args = arguments;
+    var args = arguments,
+      context = args[args.length - 1];
+
 
     return function() {
-      return fn.apply(fn, getArgumentValues(
+      return fn.apply(context, getArgumentValues(
         getFunctionArgs(fn),
         getSources(args)
       ));
