@@ -10,29 +10,34 @@ The module then takes one or more parameters, a function to inject and any numbe
 
 # How to use it
 
+**syringe(fn, [{key: val}, {key2: val2}, ...], [context])**
+
 In this example ```myFunc``` expects two parameters, ```arg1``` and ```arg2```. The Syringe function receives other parameters, but ```myFunc``` will only have access to the ones it asked for.
 
+The ```context``` parameter is optional, allowing you to provide a specific context in which to execute the injected function. If no context is provided, the last parameter provided will be used!
+
 ```javascript
-var inject = require('syringe-js');
+var syringe = require('syringe-js');
 
 var myFunc = function(arg1, arg2) {
   //...
 }
 
-var injected = inject(myFunc, {
+var injected = syringe(myFunc, {
   arg1: 'Foo',
   arg2: 'Bar',
   arg3: 'Ponies',
   arg4: {
     pie: 'apple'
-  }
+  },
+  context
 });
 ```
 
 # Contributing
-Bug fixes and new features are of course very welcome! 
+Bug fixes and new features are of course very welcome!
 
-To get started developing: 
+To get started developing:
  - Install [Grunt](http://gruntjs.com/)
  - Install dependencies with ```npm install```
  - Run the test suite with ```npm test```
